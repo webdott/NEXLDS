@@ -21,9 +21,9 @@
 
 		/*For scrollbar*/
 		&::-webkit-scrollbar {
-            background: rgb(196, 196, 196, .2);
+			background: rgb(196, 196, 196, 0.2);
 			width: 4px;
-            border-radius: 16px;
+			border-radius: 16px;
 		}
 
 		/* Track */
@@ -39,7 +39,7 @@
 
 		/* Handle on hover */
 		&::-webkit-scrollbar-thumb:hover {
-			opacity: .87;
+			opacity: 0.87;
 		}
 
 		.form__progress {
@@ -104,12 +104,20 @@
 			width: 100%;
 			max-width: 1000px;
 			font-style: normal;
-			font-weight: bold;
+			font-weight: normal;
 			font-size: 4.5rem;
 			line-height: 160%;
-			color: var(--main-text);
+			color: var(--NEXLDS-Brown);
+			opacity: 0.08;
 			padding-top: 120px;
 			scroll-snap-align: start;
+            transition: 0.5s all ease-in-out;
+
+			&.active {
+				font-weight: bold;
+				color: var(--main-text);
+				opacity: 1;
+			}
 
 			@media screen and (max-width: 700px) {
 				font-size: 2.5rem;

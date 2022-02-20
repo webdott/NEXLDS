@@ -18,7 +18,10 @@ const Intro: FC = () => {
 		//@ts-ignore
 		if (introText?.offsetTop === container?.scrollTop) {
 			setScene(1);
+			introText!.className = 'intro__text active'
 			return;
+		} else {
+			introText!.className = 'intro__text'
 		}
 
 		formQuestionArr.forEach((formQuestion, idx) => {
@@ -53,7 +56,7 @@ const Intro: FC = () => {
 					<ButtonInverse />
 				</button>
 
-				<p className='intro__text'>Welcome to the day before day 0</p>
+				<p className='intro__text active'>Welcome to the day before day 0</p>
 
 				<FormQuestion
 					question='From a noble  Local committee in the city of'
