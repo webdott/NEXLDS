@@ -1,26 +1,89 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+//@ts-ignore
+import { Navigation, Route, glide } from 'react-tiger-transition';
+
+import ROUTES from './routes';
+import { Checkout, Intro, Story } from './pages';
+import 'react-tiger-transition/styles/main.min.css';
+import './App.scss';
+
+// inject glide styles
+glide({
+	name: 'custom-glide-top',
+	direction: 'top',
+	enter: {
+		duration: 700,
+		easing: 'easeInBottom',
+		opacity: 0,
+		zIndex: 1,
+		angle: 90,
+		delay: 100,
+	},
+	exit: {
+		duration: 700,
+		easing: 'easeInBottom',
+		opacity: 0,
+		zIndex: 2,
+		angle: 90,
+	},
+});
+
+glide({
+	name: 'custom-glide-left',
+	direction: 'left',
+	enter: {
+		duration: 700,
+		easing: 'easeOutBottom',
+		opacity: 0,
+		zIndex: 1,
+		angle: 90,
+		delay: 100,
+	},
+	exit: {
+		duration: 700,
+		easing: 'easeOutBottom',
+		opacity: 0,
+		zIndex: 2,
+		angle: 90,
+	},
+});
+
+glide({
+	name: 'custom-glide-right',
+	direction: 'right',
+	enter: {
+		duration: 700,
+		easing: 'easeInBottom',
+		opacity: 0,
+		zIndex: 1,
+		angle: 90,
+		delay: 100,
+	},
+	exit: {
+		duration: 700,
+		easing: 'easeInBottom',
+		opacity: 0,
+		zIndex: 2,
+		angle: 90,
+	},
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<Navigation>
+				<Route path={ROUTES.INTRO}>
+					<Intro />
+				</Route>
+				<Route path={ROUTES.STORY}>
+					<Story />
+				</Route>
+        <Route path={ROUTES.CHECKOUT}>
+					<Checkout />
+				</Route>
+			</Navigation>
+		</Router>
+	);
 }
 
 export default App;
