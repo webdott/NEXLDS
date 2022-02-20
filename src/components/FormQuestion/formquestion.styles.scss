@@ -8,7 +8,6 @@
 	scroll-snap-align: start;
 
 	.question {
-		display: inline;
 		width: 100%;
 		font-style: normal;
 		font-weight: normal;
@@ -21,16 +20,15 @@
 	}
 
 	input {
-		display: inline-flex;
-		width: auto;
-		max-width: 200px;
+		width: 100%;
+        max-width: 600px;
 		background: none;
 		border: none;
 		border-bottom: 2px solid var(--main-text);
 		font-style: normal;
 		font-weight: bold;
 		font-size: 4.5rem;
-		color: var(--NEXLDS-Brown);
+		color: #AD4D47;
 	}
 
 	&.active {

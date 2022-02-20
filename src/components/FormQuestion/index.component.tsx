@@ -8,13 +8,11 @@ interface FormQuestionProps {
 		type: string;
 		[x: string]: any;
 	};
-	setScene: Dispatch<SetStateAction<number>>;
 }
 
 const FormQuestion: FC<FormQuestionProps> = ({
 	question,
 	inputProps,
-	setScene,
 }) => {
 	return (
 		<div className={`form__question`}>
