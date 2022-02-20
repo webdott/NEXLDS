@@ -5,9 +5,9 @@
 */
 :root {
 	--NEXLDS-Brown: #461d03;
-  --NEXLDS-Cream: #FFDFBF;
+	--NEXLDS-Cream: #ffdfbf;
 	--main-text: #9c877b;
-  --faint-gray: #E4E1DF;
+	--faint-gray: #e4e1df;
 	--secondary-text: #c6c6c6;
 	--white: #ffffff;
 }
@@ -26,8 +26,8 @@ body {
 	position: relative;
 }
 
-#root{
-  height: 100vh;
+#root {
+	height: 100vh;
 }
 
 * {
@@ -48,6 +48,7 @@ a {
 
 input {
 	transition: 0.5s;
+	border-radius: 0 !important;
 
 	&::placeholder {
 		font-family: 'Lato', sans-serif;
