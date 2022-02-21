@@ -208,7 +208,7 @@ const Intro: FC = () => {
 							type: 'dropdown',
 							options: booleanOptions,
 						}}
-						placeholder='First Conference?'
+						placeholder='Is this your first conference?'
 						onChange={setIsFirstMovie}
 					/>
 					<FormQuestion
