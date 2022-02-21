@@ -19,6 +19,11 @@ export const yesNoOptions: Array<{ value: string; label: string }> = [
 	{ value: 'no', label: 'No' },
 ]
 
+export const booleanOptions: Array<{ value: boolean; label: string }> = [
+	{ value: true, label: 'Yes' },
+	{ value: false, label: 'No' },
+]
+
 export const genderOptions: Array<{ value: string; label: string }> = [
 	{ value: 'male', label: 'Male' },
 	{ value: 'female', label: 'Female' },

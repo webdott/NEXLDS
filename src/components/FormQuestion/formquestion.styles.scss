@@ -8,7 +8,7 @@
 		width: 100%;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 4.5rem;
+		font-size: 4rem;
 		color: var(--NEXLDS-Brown);
 		opacity: 0.08;
 		margin-bottom: 20px;
@@ -16,7 +16,8 @@
 		transition: 0.5s all ease-in-out;
 	}
 
-	input {
+	input,
+    textarea {
 		width: 100%;
 		max-width: 600px;
 		background: none;
@@ -24,9 +25,15 @@
 		border-bottom: 2px solid var(--main-text);
 		font-style: normal;
 		font-weight: bold;
-		font-size: 4.5rem;
+		font-size: 3.5rem;
 		color: #ad4d47;
+        resize: none;
 	}
+
+    textarea:focus{
+        outline: none;
+        border: 1px solid var(--main-text);
+    }
 
 	.custom__dropdown {
 		width: 100%;
@@ -49,7 +56,7 @@
 			padding: 0.3rem 1rem;
 
 			.is-selected {
-				font-size: 4.5rem;
+				font-size: 3.5rem;
 				line-height: 160%;
 				color: #ad4d47;
 			}
@@ -82,6 +89,7 @@
 			min-height: 160px;
 			max-height: 300px;
 			max-width: 300px;
+            top: 0%;
 
 			/*For scrollbar*/
 			&::-webkit-scrollbar {

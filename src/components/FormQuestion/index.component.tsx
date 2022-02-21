@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import Dropdown, { Option } from 'react-dropdown';
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa';
 
@@ -11,11 +11,18 @@ interface FormQuestionProps {
 		type: string;
 		[x: string]: any;
 	};
+	placeholder: string;
+    onChange?: any
 }
 
-const FormQuestion: FC<FormQuestionProps> = ({ question, inputProps }) => {
+const FormQuestion: FC<FormQuestionProps> = ({
+	question,
+	inputProps,
+	placeholder,
+    onChange
+}) => {
 	return (
-		<div className={`form__question`}>
+		<div className={`form__question`} data-attribute={placeholder}>
 			<p className='question'>{question}</p>
 			{inputProps.type === 'dropdown' ? (
 				<Dropdown
@@ -25,10 +32,12 @@ const FormQuestion: FC<FormQuestionProps> = ({ question, inputProps }) => {
 					controlClassName='custom__dropdown__control'
 					arrowClosed={<FaCaretDown />}
 					arrowOpen={<FaCaretUp />}
-					// onChange={(option: Option) =>
-					// 	onChange ? onChange(option.value) : null
-					// }
+					onChange={(option: Option) =>
+						onChange ? onChange(option.value) : null
+					}
 				/>
+			) : inputProps.type === 'textarea' ? (
+				<textarea onChange={inputProps.onChange} required/>
 			) : (
 				<input {...inputProps} />
 			)}

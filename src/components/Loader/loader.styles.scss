@@ -1,0 +1,25 @@
+.loader__main {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+
+	svg {
+		animation: spin 1s ease-in-out infinite;
+		-webkit-animation: spin 1s ease-in-out infinite;
+		font-size: 1.2rem;
+		color: #fff;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+	@-webkit-keyframes spin {
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+}

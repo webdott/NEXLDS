@@ -10,7 +10,7 @@ import './App.scss';
 // inject glide styles
 glide({
 	name: 'custom-glide-top',
-	direction: 'top',
+	direction: 'bottom',
 	enter: {
 		duration: 700,
 		easing: 'easeInBottom',

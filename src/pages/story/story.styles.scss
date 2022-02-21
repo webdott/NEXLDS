@@ -18,6 +18,8 @@
 		scroll-behavior: smooth;
 		position: relative;
 		scroll-snap-type: y mandatory;
+		border: none;
+		outline: none;
 
 		/*For scrollbar*/
 		&::-webkit-scrollbar {
@@ -93,6 +95,7 @@
 				font-size: 1.25rem;
 				line-height: 143.1%;
 				color: var(--secondary-text);
+				padding: 0 5px;
 			}
 
 			svg path {
@@ -147,6 +150,7 @@
 				height: 80px;
 				position: relative;
 				background: none;
+				border: none;
 				animation: beat 1.5s linear infinite alternate-reverse;
 
 				svg path,
@@ -168,15 +172,37 @@
 					color: #f2f2f2;
 				}
 
-				&:hover {
-					svg path {
-						fill: var(--main-text);
-					}
+				.loader__main {
+					position: absolute;
+					width: 100%;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -60%);
 
-					p {
-						color: var(--NEXLDS-Cream);
+					svg path {
+						transition: all 0.5s ease-in-out;
+
+						&:first-child {
+							background: none !important;
+						}
 					}
 				}
+
+				// &:hover {
+				// 	svg path {
+				// 		fill: var(--main-text);
+				// 	}
+
+				// 	.loader__main {
+				// 		svg g path{
+				// 			fill: var(--white);
+				// 		}
+				// 	}
+
+				// 	p {
+				// 		color: var(--NEXLDS-Cream);
+				// 	}
+				// }
 
 				@media screen and (max-width: 400px) {
 					animation: beat2 1.5s linear infinite alternate-reverse;
@@ -200,6 +226,15 @@
 					}
 				}
 			}
+
+			.feedback {
+				font-style: normal;
+				font-weight: bold;
+				font-size: 1rem;
+				line-height: 143.1%;
+				color: red;
+                margin-top: 10px;
+			}
 		}
 
 		#footer .footer__content {
@@ -209,6 +244,10 @@
 		@media screen and (max-width: 700px) {
 			padding-right: 10px;
 			margin: 80px auto 20px;
+		}
+
+		.link {
+			display: none;
 		}
 	}
 }
