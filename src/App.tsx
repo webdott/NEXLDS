@@ -12,7 +12,7 @@ glide({
 	name: 'custom-glide-top',
 	direction: 'bottom',
 	enter: {
-		duration: 700,
+		duration: 500,
 		easing: 'easeInBottom',
 		opacity: 0,
 		zIndex: 1,
@@ -20,7 +20,7 @@ glide({
 		delay: 100,
 	},
 	exit: {
-		duration: 700,
+		duration: 500,
 		easing: 'easeInBottom',
 		opacity: 0,
 		zIndex: 2,
@@ -32,7 +32,7 @@ glide({
 	name: 'custom-glide-left',
 	direction: 'left',
 	enter: {
-		duration: 700,
+		duration: 500,
 		easing: 'easeOutBottom',
 		opacity: 0,
 		zIndex: 1,
@@ -40,7 +40,7 @@ glide({
 		delay: 100,
 	},
 	exit: {
-		duration: 700,
+		duration: 500,
 		easing: 'easeOutBottom',
 		opacity: 0,
 		zIndex: 2,
@@ -52,7 +52,7 @@ glide({
 	name: 'custom-glide-right',
 	direction: 'right',
 	enter: {
-		duration: 700,
+		duration: 500,
 		easing: 'easeInBottom',
 		opacity: 0,
 		zIndex: 1,
@@ -60,7 +60,7 @@ glide({
 		delay: 100,
 	},
 	exit: {
-		duration: 700,
+		duration: 500,
 		easing: 'easeInBottom',
 		opacity: 0,
 		zIndex: 2,
