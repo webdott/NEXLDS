@@ -30,6 +30,10 @@
         resize: none;
 	}
 
+    input[type='date']{
+        margin-top: 30px;
+    }
+
     textarea:focus{
         outline: none;
         border: 1px solid var(--main-text);
