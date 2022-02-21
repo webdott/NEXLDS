@@ -259,14 +259,14 @@ const Intro: FC = () => {
 						placeholder='Enter Emergency Number'
 					/>
 					<FormQuestion
-						question={`Relationship of your character with the person above named?`}
+						question={`Relationship of your character with the above named person?`}
 						inputProps={{
 							type: 'text',
 							required: true,
 							onChange: ({ target }: any) =>
 								setEmergencyRelation(target!.value),
 						}}
-						placeholder='Relationship?'
+						placeholder='Relationship with above named person?'
 					/>
 					<FormQuestion
 						question={`Does your character have anything else to tell us? `}
