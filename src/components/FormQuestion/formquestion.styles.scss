@@ -25,7 +25,7 @@
 		border-bottom: 2px solid var(--main-text);
 		font-style: normal;
 		font-weight: bold;
-		font-size: 3.5rem;
+		font-size: 2.5rem;
 		color: #ad4d47;
         resize: none;
 	}
@@ -61,7 +61,7 @@
 			padding: 0.3rem 1rem;
 
 			.is-selected {
-				font-size: 3.5rem;
+				font-size: 2.5rem;
 				line-height: 160%;
 				color: #ad4d47;
 			}
@@ -74,7 +74,7 @@
 
 			@media screen and (max-width: 700px) {
 				.is-selected {
-					font-size: 2.5rem;
+					font-size: 1.5rem;
 					line-height: 160%;
 				}
 
@@ -166,7 +166,7 @@
 		}
 
 		input {
-			font-size: 2rem;
+			font-size: 1.5rem;
 			line-height: 160%;
 		}
 	}
