@@ -162,6 +162,7 @@ const Intro: FC = () => {
 							type: 'date',
 							required: true,
 							onChange: ({ target }: any) => setDob(target!.value),
+							placeholder: 'dd/mm/yyyy'
 						}}
 						placeholder='Enter D.O.B'
 					/>
