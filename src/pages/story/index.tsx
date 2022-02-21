@@ -218,7 +218,7 @@ const Intro: FC = () => {
 							required: true,
 							onChange: ({ target }: any) => setEmail(target!.value),
 						}}
-						placeholder='Enter Email'
+						placeholder='Enter AIESEC Email'
 					/>
 					<FormQuestion
 						question={`Does your character have any allergies?`}
