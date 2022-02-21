@@ -21,14 +21,124 @@
 
 	input {
 		width: 100%;
-        max-width: 600px;
+		max-width: 600px;
 		background: none;
 		border: none;
 		border-bottom: 2px solid var(--main-text);
 		font-style: normal;
 		font-weight: bold;
 		font-size: 4.5rem;
-		color: #AD4D47;
+		color: #ad4d47;
+	}
+
+	.custom__dropdown {
+		width: 100%;
+		max-width: 480px;
+		border: 1px solid var(--outline);
+		border-radius: 5px;
+
+		&__control {
+			width: 100%;
+			// height: 48px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border: none;
+			cursor: pointer;
+			background: none;
+			font-style: normal;
+			font-weight: bold;
+			color: #ad4d47;
+			padding: 0.3rem 1rem;
+
+			.is-selected {
+				font-size: 4.5rem;
+				line-height: 160%;
+				color: #ad4d47;
+			}
+
+			svg {
+				margin-left: 0.7rem;
+				color: #ad4d47;
+				font-size: 2.5rem;
+			}
+
+			@media screen and (max-width: 700px) {
+				.is-selected {
+					font-size: 2.5rem;
+					line-height: 160%;
+				}
+
+				svg {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		.Dropdown-menu {
+			padding: 16px;
+			background: #f2f2f2;
+			box-shadow: 0px 4px 20px 3px rgba(173, 173, 173, 0.25);
+			border-radius: 8px;
+			margin-top: 4px;
+			z-index: 10;
+			min-height: 160px;
+			max-height: 300px;
+			max-width: 300px;
+
+			/*For scrollbar*/
+			&::-webkit-scrollbar {
+				background: rgb(196, 196, 196, 0.2);
+				width: 4px;
+				border-radius: 16px;
+			}
+
+			/* Track */
+			&::-webkit-scrollbar-track {
+				border-radius: 4px;
+			}
+
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+				background: var(--main-text);
+				border-radius: 16px;
+			}
+
+			/* Handle on hover */
+			&::-webkit-scrollbar-thumb:hover {
+				opacity: 0.87;
+			}
+
+			.Dropdown-option {
+				border-bottom: 2px solid #d5d5d5;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 0.875rem;
+				line-height: 16px;
+				letter-spacing: -0.02em;
+				color: #686868;
+				padding: 16px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover{
+                    background: none;
+                    color: var(--main-text);
+                }
+
+				&.is-selected {
+					background: none;
+					font-weight: bold;
+					color: #ad4d47;
+
+                    &:hover{
+                        background: none;
+                        color: #ad4d47;
+                    }
+				}
+			}
+		}
 	}
 
 	&.active {

@@ -3,54 +3,94 @@
 	height: 100%;
 	min-height: 100vh;
 	background: #ad4d47;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 	.checkout__card__container {
 		width: 100%;
+		flex: auto;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
-		min-height: calc(100vh - 78px);
+		justify-content: center;
 
 		.checkout__card {
-            transform: scale(1.4);
+			transform: scale(1.2);
 			position: relative;
-			width: 100%;
-			max-width: 257px;
-			margin: 0 auto;
-			height: 153px;
-			border-radius: 18px;
+			width: 327px;
+			margin: 150px auto 0;
 			overflow: hidden;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 
 			.checkout__card__text {
+				width: 100%;
+				height: 100%;
 				position: absolute;
-				width: calc(100% - 72px);
-                height: calc(100% - 36px);
-				top: 50%;
+				top: 0;
 				left: 0;
-                transform: translateY(-50%);
-                padding-left: 18px;
-                border-right: 2px dashed #E4E4E4;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
 				p {
 					font-style: normal;
-					font-weight: normal;
-					font-size: 0.875rem;
+					font-weight: bold;
+					font-size: 1.25rem;
 					line-height: 160%;
-					color: var(--NEXLDS-Cream);
-
-                    &.delegate{
-                        font-weight: bold;
-                        margin-bottom: 30px;
-                    }
+					color: var(--NEXLDS-Brown);
+					text-align: center;
 				}
 			}
 
-            @media screen  and (max-width: 400px) {
-                transform: scale(1.2);
-            }
+			@media screen and (max-width: 430px) {
+				transform: scale(1);
+			}
+
+			@media screen and (max-width: 400px) {
+				margin: 70px auto 0;
+				transform: scale(0.9);
+			}
+		}
+
+		.follow__up__text {
+			width: 100%;
+			max-width: 465px;
+			margin: 150px auto 30px;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 1.375rem;
+			line-height: 160%;
+			color: #e4e1df;
+			text-align: center;
+			padding: 0 20px;
+
+			span {
+				font-size: 1.375rem;
+				line-height: 160%;
+				font-weight: 900;
+			}
+
+			@media screen and (max-width: 430px) {
+				margin: 90px auto 30px;
+			}
+
+			@media screen and (max-width: 400px) {
+				margin: 60px auto 20px;
+				max-width: 334px;
+				font-size: 0.9rem;
+
+				span {
+					font-size: 0.9rem;
+				}
+			}
+		}
+
+		.follow__up__text + svg {
+			margin-bottom: 50px;
 		}
 	}
 }
