@@ -96,15 +96,12 @@ const Intro: FC = () => {
 			aob,
 		};
 
-		console.log(movieData)
-
 		try {
 			await createMovie({
 				data: movieData,
 			});
 			linkRef.current!.click();
 		} catch (error: any) {
-			console.log(error.response)
 			setFeedbackText(error.response?.data?.errors[0]?.msg);
 			setTimeout(() => {
 				setFeedbackText('');
