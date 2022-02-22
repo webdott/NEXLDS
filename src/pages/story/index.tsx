@@ -91,6 +91,7 @@ const Intro: FC = () => {
 			isFirstMovie,
 			email,
 			allergies: hasAllergies ? allergies : 'nil',
+			treatment: hasAllergies ? treatment : 'nil',
 			moviePlot,
 			sameSexRoomie,
 			emergencyPhone,
@@ -250,7 +251,7 @@ const Intro: FC = () => {
 						}}
 						placeholder='Enter allergy'
 					/>
-					{/* <FormQuestion
+					<FormQuestion
 						question={`What is your character's treatment?`}
 						inputProps={{
 							type: 'textarea',
@@ -258,7 +259,7 @@ const Intro: FC = () => {
 							onChange: ({ target }: any) => setTreatment(target!.value),
 						}}
 						placeholder='Enter medication'
-					/> */}
+					/>
 					<FormQuestion
 						question={`How do you want your movie to look like? `}
 						inputProps={{
