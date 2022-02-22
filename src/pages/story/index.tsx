@@ -9,7 +9,7 @@ import {
 	genderOptions,
 	LCOptions,
 	booleanOptions,
-	booleanInverseOptions
+	booleanInverseOptions,
 } from '../../data/options';
 
 import './story.styles.scss';
@@ -90,7 +90,7 @@ const Intro: FC = () => {
 			rank,
 			isFirstMovie,
 			email,
-			allergies,
+			allergies: hasAllergies ? allergies : 'nil',
 			moviePlot,
 			sameSexRoomie,
 			emergencyPhone,
