@@ -12,14 +12,14 @@ interface FormQuestionProps {
 		[x: string]: any;
 	};
 	placeholder: string;
-    onChange?: any
+	onChange?: any;
 }
 
 const FormQuestion: FC<FormQuestionProps> = ({
 	question,
 	inputProps,
 	placeholder,
-    onChange
+	onChange,
 }) => {
 	return (
 		<div className={`form__question`} data-attribute={placeholder}>
@@ -37,7 +37,10 @@ const FormQuestion: FC<FormQuestionProps> = ({
 					}
 				/>
 			) : inputProps.type === 'textarea' ? (
-				<textarea onChange={inputProps.onChange} required/>
+				<textarea
+					onChange={inputProps.onChange}
+					required={inputProps.required}
+				/>
 			) : (
 				<input {...inputProps} />
 			)}

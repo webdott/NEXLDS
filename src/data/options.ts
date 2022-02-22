@@ -24,6 +24,11 @@ export const booleanOptions: Array<{ value: boolean; label: string }> = [
 	{ value: false, label: 'No' },
 ]
 
+export const booleanInverseOptions: Array<{ value: boolean; label: string }> = [
+	{ value: false, label: 'No' },
+	{ value: true, label: 'Yes' },
+]
+
 export const genderOptions: Array<{ value: string; label: string }> = [
 	{ value: 'male', label: 'Male' },
 	{ value: 'female', label: 'Female' },

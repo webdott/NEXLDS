@@ -8,8 +8,8 @@ import { Footer, FormQuestion, Loader } from '../../components';
 import {
 	genderOptions,
 	LCOptions,
-	yesNoOptions,
 	booleanOptions,
+	booleanInverseOptions
 } from '../../data/options';
 
 import './story.styles.scss';
@@ -25,6 +25,7 @@ const Intro: FC = () => {
 	const [rank, setRank] = useState<string>('');
 	const [isFirstMovie, setIsFirstMovie] = useState<boolean>(true);
 	const [email, setEmail] = useState<string>('');
+	const [hasAllergies, setHasAllergies] = useState<boolean>(false);
 	const [allergies, setAllergies] = useState<string>('yes');
 	const [moviePlot, setMoviePlot] = useState<string>('');
 	const [sameSexRoomie, setSameSexRoomie] = useState<boolean>(true);
@@ -77,7 +78,7 @@ const Intro: FC = () => {
 	);
 
 	const submitForm = async (e: any) => {
-		if(loading) return;
+		if (loading) return;
 		e.preventDefault();
 		const movieData = {
 			name,
@@ -111,6 +112,14 @@ const Intro: FC = () => {
 
 	useEffect(() => {
 		const story = document.querySelector('#story');
+
+		//play background sound on enter of the page
+		const audio = story!.querySelector('audio');
+		audio!.volume = 0.5;
+		setTimeout(() => {
+			audio!.play();
+		}, 1000);
+
 		const container = document.querySelector('.story__content');
 		//@ts-ignore
 		container!.focus();
@@ -128,6 +137,7 @@ const Intro: FC = () => {
 
 	return (
 		<div id='story'>
+			<audio src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3'></audio>
 			<div className='story__content' tabIndex={0}>
 				<button className='form__progress'>
 					<div className='dot' />
@@ -162,7 +172,7 @@ const Intro: FC = () => {
 							type: 'date',
 							required: true,
 							onChange: ({ target }: any) => setDob(target!.value),
-							placeholder: 'dd/mm/yyyy'
+							placeholder: 'dd/mm/yyyy',
 						}}
 						placeholder='Enter D.O.B'
 					/>
@@ -225,10 +235,19 @@ const Intro: FC = () => {
 						question={`Does your character have any allergies?`}
 						inputProps={{
 							type: 'dropdown',
-							options: yesNoOptions,
+							options: booleanInverseOptions,
 						}}
 						placeholder='Select Yes/No'
-						onChange={setAllergies}
+						onChange={setHasAllergies}
+					/>
+					<FormQuestion
+						question={`If yes, what allergy / allergies?`}
+						inputProps={{
+							type: 'textarea',
+							required: hasAllergies,
+							onChange: ({ target }: any) => setAllergies(target!.value),
+						}}
+						placeholder='State your allergies'
 					/>
 					<FormQuestion
 						question={`How do you want your movie to look like? `}
