@@ -100,7 +100,7 @@ const Intro: FC = () => {
 			sameSexRoomie,
 			emergencyPhone,
 			emergencyRelation,
-			aob,
+			aob: aob.length ? aob : 'nil',
 		};
 
 		try {
@@ -306,7 +306,7 @@ const Intro: FC = () => {
 						question={`Does your character have anything else to tell us? `}
 						inputProps={{
 							type: 'textarea',
-							required: true,
+							required: false,
 							onChange: ({ target }: any) => setAob(target!.value),
 						}}
 						placeholder='Anything Else?'
