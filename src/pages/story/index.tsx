@@ -27,7 +27,7 @@ const Intro: FC = () => {
 	const [email, setEmail] = useState<string>('');
 	const [hasAllergies, setHasAllergies] = useState<boolean>(false);
 	const [allergies, setAllergies] = useState<string>('');
-	const [treatment, setTreatment] = useState<string>('');
+	const [treatments, setTreatments] = useState<string>('');
 	const [moviePlot, setMoviePlot] = useState<string>('');
 	const [sameSexRoomie, setSameSexRoomie] = useState<boolean>(true);
 	const [emergencyPhone, setEmergencyPhone] = useState<string>('');
@@ -81,6 +81,9 @@ const Intro: FC = () => {
 	const submitForm = async (e: any) => {
 		if (loading) return;
 		e.preventDefault();
+		const nameArr = name.split(' ');
+		const firstname = nameArr[0];
+		const lastname = nameArr[nameArr.length - 1];
 		const movieData = {
 			name,
 			dob,
@@ -91,7 +94,7 @@ const Intro: FC = () => {
 			isFirstMovie,
 			email,
 			allergies: hasAllergies ? allergies : 'nil',
-			treatment: hasAllergies ? treatment : 'nil',
+			treatments: hasAllergies ? treatments : 'nil',
 			moviePlot,
 			sameSexRoomie,
 			emergencyPhone,
@@ -165,7 +168,7 @@ const Intro: FC = () => {
 							required: true,
 							onChange: ({ target }: any) => setName(target!.value),
 						}}
-						placeholder='Input name'
+						placeholder='Input Firstname and Lastname'
 					/>
 
 					<FormQuestion
@@ -256,7 +259,7 @@ const Intro: FC = () => {
 						inputProps={{
 							type: 'textarea',
 							required: hasAllergies,
-							onChange: ({ target }: any) => setTreatment(target!.value),
+							onChange: ({ target }: any) => setTreatments(target!.value),
 						}}
 						placeholder='Enter medication'
 					/>
