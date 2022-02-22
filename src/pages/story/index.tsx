@@ -169,7 +169,7 @@ const Intro: FC = () => {
 							required: true,
 							onChange: ({ target }: any) => setName(target!.value),
 						}}
-						placeholder='Input Firstname and Lastname'
+						placeholder='Input First name and Last name'
 					/>
 
 					<FormQuestion
