@@ -26,7 +26,8 @@ const Intro: FC = () => {
 	const [isFirstMovie, setIsFirstMovie] = useState<boolean>(true);
 	const [email, setEmail] = useState<string>('');
 	const [hasAllergies, setHasAllergies] = useState<boolean>(false);
-	const [allergies, setAllergies] = useState<string>('yes');
+	const [allergies, setAllergies] = useState<string>('');
+	const [treatment, setTreatment] = useState<string>('');
 	const [moviePlot, setMoviePlot] = useState<string>('');
 	const [sameSexRoomie, setSameSexRoomie] = useState<boolean>(true);
 	const [emergencyPhone, setEmergencyPhone] = useState<string>('');
@@ -247,8 +248,17 @@ const Intro: FC = () => {
 							required: hasAllergies,
 							onChange: ({ target }: any) => setAllergies(target!.value),
 						}}
-						placeholder='State your allergies'
+						placeholder='Enter allergy'
 					/>
+					{/* <FormQuestion
+						question={`What is your character's treatment?`}
+						inputProps={{
+							type: 'textarea',
+							required: hasAllergies,
+							onChange: ({ target }: any) => setTreatment(target!.value),
+						}}
+						placeholder='Enter medication'
+					/> */}
 					<FormQuestion
 						question={`How do you want your movie to look like? `}
 						inputProps={{
