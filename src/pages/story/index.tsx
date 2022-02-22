@@ -27,7 +27,7 @@ const Intro: FC = () => {
 	const [email, setEmail] = useState<string>('');
 	const [hasAllergies, setHasAllergies] = useState<boolean>(false);
 	const [allergies, setAllergies] = useState<string>('');
-	const [treatments, setTreatments] = useState<string>('');
+	const [treatment, setTreatment] = useState<string>('');
 	const [moviePlot, setMoviePlot] = useState<string>('');
 	const [sameSexRoomie, setSameSexRoomie] = useState<boolean>(true);
 	const [emergencyPhone, setEmergencyPhone] = useState<string>('');
@@ -95,7 +95,7 @@ const Intro: FC = () => {
 			isFirstMovie,
 			email,
 			allergies: hasAllergies ? allergies : 'nil',
-			treatments: hasAllergies ? treatments : 'nil',
+			treatment: hasAllergies ? treatment : 'nil',
 			moviePlot,
 			sameSexRoomie,
 			emergencyPhone,
@@ -260,7 +260,7 @@ const Intro: FC = () => {
 						inputProps={{
 							type: 'textarea',
 							required: hasAllergies,
-							onChange: ({ target }: any) => setTreatments(target!.value),
+							onChange: ({ target }: any) => setTreatment(target!.value),
 						}}
 						placeholder='Enter medication'
 					/>
