@@ -138,7 +138,7 @@ const Intro: FC = () => {
 
 	return (
 		<div id='story'>
-			<audio src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3'></audio>
+			<audio src='https://res.cloudinary.com/webdot/video/upload/v1645495718/NEXLDS-Shii/NEXLDS-audio_wdhdml.mp3'></audio>
 			<div className='story__content' tabIndex={0}>
 				<button className='form__progress'>
 					<div className='dot' />
