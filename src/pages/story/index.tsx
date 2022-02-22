@@ -115,7 +115,7 @@ const Intro: FC = () => {
 
 		//play background sound on enter of the page
 		const audio = story!.querySelector('audio');
-		audio!.volume = 0.5;
+		audio!.volume = 0.3;
 		setTimeout(() => {
 			audio!.play();
 		}, 1000);
