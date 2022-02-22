@@ -82,10 +82,11 @@ const Intro: FC = () => {
 		if (loading) return;
 		e.preventDefault();
 		const nameArr = name.split(' ');
-		const firstname = nameArr[0];
-		const lastname = nameArr[nameArr.length - 1];
+		const firstName = nameArr[0];
+		const lastName = nameArr[nameArr.length - 1];
 		const movieData = {
-			name,
+			firstName,
+			lastName,
 			dob,
 			gender,
 			nativity,
