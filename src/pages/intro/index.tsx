@@ -2,6 +2,7 @@
 import { Link } from 'react-tiger-transition';
 
 import ButtonSVG from '../../assets/svgs/ButtonSVG';
+import CheckoutPattern2 from '../../assets/svgs/CheckoutPattern2';
 import QuillIcon from '../../assets/svgs/QuillIcon';
 import ROUTES from '../../routes';
 import './intro.styles.scss';
@@ -9,6 +10,7 @@ import './intro.styles.scss';
 const Intro = () => {
 	return (
 		<div id='intro'>
+			<CheckoutPattern2 />
 			<div className='quill'>
 				<QuillIcon />
 			</div>
