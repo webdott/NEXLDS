@@ -14,6 +14,7 @@ import {
 
 import './story.styles.scss';
 import ROUTES from '../../routes';
+import CheckoutPattern from '../../assets/svgs/CheckoutPattern';
 
 const Intro: FC = () => {
 	const linkRef = useRef<HTMLLinkElement>(null);
@@ -144,6 +145,7 @@ const Intro: FC = () => {
 	return (
 		<div id='story'>
 			<audio src='https://res.cloudinary.com/webdot/video/upload/v1645495718/NEXLDS-Shii/NEXLDS-audio_wdhdml.mp3'></audio>
+			<CheckoutPattern />
 			<div className='story__content' tabIndex={0}>
 				<button className='form__progress'>
 					<div className='dot' />
