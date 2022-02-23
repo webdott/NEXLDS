@@ -21,7 +21,7 @@ const Intro: FC = () => {
 	const [name, setName] = useState<string>('');
 	const [dob, setDob] = useState<string>('');
 	const [gender, setGender] = useState<string>('male');
-	const [nativity, setNativity] = useState<string>('abuja');
+	const [nativity, setNativity] = useState<string>('abeokuta');
 	const [leadershipDevTime, setLeadershipDevTime] = useState<string>('');
 	const [rank, setRank] = useState<string>('');
 	const [isFirstMovie, setIsFirstMovie] = useState<boolean>(true);
