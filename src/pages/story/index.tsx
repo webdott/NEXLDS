@@ -82,7 +82,7 @@ const Intro: FC = () => {
 	const submitForm = async (e: any) => {
 		if (loading) return;
 		e.preventDefault();
-		const nameArr = name.split(' ');
+		const nameArr = name.trim().split(' ');
 		const firstName = nameArr[0];
 		const lastName = nameArr[nameArr.length - 1];
 		const movieData = {
