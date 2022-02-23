@@ -2,14 +2,14 @@ import { FC } from 'react';
 
 import Scroll from '../../assets/svgs/Scroll';
 import Scribble from '../../assets/svgs/Scribble';
-import CheckoutPattern from '../../assets/svgs/CheckoutPattern';
+import CheckoutPattern3 from '../../assets/svgs/CheckoutPattern3';
 import { Footer } from '../../components';
 import './checkout.styles.scss';
 
 const Checkout: FC = () => {
 	return (
 		<div id='checkout'>
-			<CheckoutPattern />
+			<CheckoutPattern3 />
 			<div className='checkout__card__container'>
 				<div className='checkout__card'>
 					<div className='checkout__card__text'>

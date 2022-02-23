@@ -11,23 +11,28 @@
 
 	&>svg{
 		position: absolute;
+		z-index: 2;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
+		opacity: .1;
 	}
 
 	.quill {
+		position: relative;
+		z-index: 3;
 		margin-bottom: 178px;
 	}
 
 	.begin__button {
+		position: relative;
+		z-index: 3;
 		display: block;
 		text-align: center;
 		text-decoration: none;
 		width: 249px;
 		height: 80px;
-		position: relative;
 		background: none;
 		animation: beat 1.5s linear infinite alternate-reverse;
 
