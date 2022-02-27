@@ -2,6 +2,7 @@ export const LCOptions: Array<{ value: string; label: string }> = [
 	{ value: 'abeokuta', label: 'Abeokuta' },
 	{ value: 'abuja', label: 'Abuja' },
 	{ value: 'akure', label: 'Akure' },
+	{ value: 'alumni', label: 'Alumni' },
 	{ value: 'benin', label: 'Benin' },
 	{ value: 'benue', label: 'Benue' },
 	{ value: 'calabar', label: 'Calabar' },
